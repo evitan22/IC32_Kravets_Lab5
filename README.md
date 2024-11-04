@@ -1,0 +1,1 @@
+# IC32_Kravets_Lab5
