@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numbers = [1, 324, 4, 943, 94, 9];
+        function filterArray(numbers, value) {
+            for (let i = 0; i < numbers.length; i++) {
+                if (numbers[i] <= value) {
+                    numbers.splice(i, 1);
+                }
+            }
+            return numbers;
+        }
+        console.log(filterArray(numbers, 10));
+    </script>
+</body>
+</html>

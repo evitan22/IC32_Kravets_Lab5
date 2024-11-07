@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function buildSortedArray(arr) {
+            let divisibleBy2 = [];
+            let divisibleBy2And3 = [];
+            let divisibleBy3 = [];
+
+            arr.forEach(num => {
+                if (num % 2 === 0 && num % 3 === 0) {
+                divisibleBy2And3.push(num);
+                } 
+                else if (num % 2 === 0) {
+                divisibleBy2.push(num);
+                } 
+                else if (num % 3 === 0) {
+                divisibleBy3.push(num);
+                }
+            });
+
+            let newArr = [...divisibleBy2, ...divisibleBy2And3, ...divisibleBy3];
+            return newArr;
+        }
+
+        let numbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15];
+
+        console.log("Вхідний масив: ", numbers);
+
+        let new_numbers = buildSortedArray(numbers);
+
+        console.log("Вихідний масив: ", new_numbers);
+    </script>
+</body>
+</html>

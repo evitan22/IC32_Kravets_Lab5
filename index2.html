@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let message = ["392j", "dsgweg", "SAlE", "sm", "sdgsd"]
+
+        function checkForSpam(message) {
+            for (const mes of message) {
+                if (mes.toLowerCase() == "spam" || mes.toLowerCase() == "sale") {
+                    return true;
+                }
+            }
+            return false;
+        }
+        console.log(checkForSpam(message))
+    </script>
+</body>
+</html>
